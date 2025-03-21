@@ -1,5 +1,5 @@
 public class MinhaClasse {
     public static void main(String[] args) {
-        System.out.println("Olá Mundo");
+        System.out.println("Fui executado no terminal!");
     }
 }
