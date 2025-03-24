@@ -143,3 +143,111 @@ Agora você conhece **todo o ambiente Java**! 🎉
 
 Agora você está pronto para desenvolver com Java! 🚀
 
+# ⚡ Estrutura de Diretórios e Pacotes em Java – Guia Completo
+
+Se você está começando com **Java**, é essencial entender como organizar seu código de maneira estruturada, utilizando **pacotes e diretórios**. Neste guia, vamos explorar **como funciona a hierarquia de pastas em Java** e como seguir as melhores práticas. 
+
+---
+
+## 🌐 O que são Pacotes em Java?
+
+Em Java, um **pacote** (“package”) é um **conjunto de classes e interfaces relacionadas**, organizadas de forma hierárquica. Ele serve para:
+
+✅ **Organizar o código** de maneira modular
+✅ **Evitar conflitos de nomes** entre classes
+✅ **Facilitar a reutilização de código**
+✅ **Melhorar a segurança**, tornando algumas classes acessíveis apenas dentro do pacote
+
+---
+
+## 📁 Como organizar pastas e pacotes
+
+A estrutura de pastas em um projeto Java segue a convenção de pacotes.
+
+Exemplo:
+```
+meu-projeto/
+    src/
+        com/
+            empresa/
+                projeto/
+                    Main.java
+                    utils/
+                        Utilitario.java
+```
+Nesse caso:
+- `src/` é a pasta que contém o código-fonte
+- `com.empresa.projeto` é o **pacote raiz** do projeto
+- `Main.java` e `Utilitario.java` pertencem ao pacote `com.empresa.projeto`
+
+---
+
+## 📚 Declaração de Pacotes em Java
+
+Cada arquivo `.java` deve declarar seu pacote no topo do código. Exemplo:
+
+```java
+package com.empresa.projeto;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, Java!");
+    }
+}
+```
+Isso informa ao compilador que a classe `Main` faz parte do pacote `com.empresa.projeto`.
+
+---
+
+## 🔗 Importando Classes de Outros Pacotes
+
+Se precisar usar uma classe de outro pacote, você deve **importá-la**:
+
+```java
+import com.empresa.projeto.utils.Utilitario;
+
+public class Main {
+    public static void main(String[] args) {
+        Utilitario.metodoAuxiliar();
+    }
+}
+```
+Alternativamente, você pode importar **todas** as classes de um pacote:
+
+```java
+import com.empresa.projeto.utils.*;
+```
+
+---
+
+## 🌟 Convenções de Nomenclatura para Pacotes
+
+As boas práticas recomendam:
+
+1. **Usar letras minúsculas** para pacotes
+2. **Usar domínios invertidos** para pacotes principais (`com.empresa.projeto`)
+3. **Criar subpacotes** conforme a responsabilidade (**`utils`, `controllers`, `models`**)
+
+Exemplo de estrutura bem organizada:
+```
+com.meublog/
+    models/
+        Usuario.java
+        Post.java
+    controllers/
+        UsuarioController.java
+    utils/
+        Validador.java
+```
+
+---
+
+## 🚀 Conclusão
+
+Agora você sabe como estruturar seu projeto Java corretamente! 
+
+✅ **Use pacotes para modularizar seu código**  
+✅ **Siga convenções para evitar conflitos e organizar melhor o projeto**  
+✅ **Utilize subpacotes para categorizar funcionalidades**  
+
+Com isso, seu código fica **mais organizado, reutilizável e fácil de manter**! 🚀
