@@ -12,7 +12,12 @@ public class Book {
     private LivroCategory categoria;
     private LivroState estado;
 
-    public Book(String title, String author, LivroCategory categoria, LivroState estado) {
+    public Book(
+            String title,
+            String author,
+            LivroCategory categoria,
+            LivroState estado
+    ) {
         this.id = UUID.randomUUID();
         this.title = title;
         this.author = author;
